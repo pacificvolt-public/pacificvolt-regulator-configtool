@@ -1,6 +1,6 @@
 # LVR Configuration Tool — downloads
 
-Pacific Volt's tool for configuring and monitoring LVR line voltage regulators, over
+Pacific Volt's tool for configuring and monitoring LVR low voltage regulators, over
 Bluetooth, serial or the network. Windows 10 and 11, 64-bit.
 
 This repository holds the published builds and nothing else — no source code.
