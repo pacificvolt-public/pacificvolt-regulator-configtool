@@ -17,8 +17,10 @@ Some strings are translated to themselves on purpose. Firmware fault codes (`CB`
 (`toolBar`, `MainWindow`) are identifiers rather than prose - translating them
 would break the match against what the regulator actually sends.
 
-A few strings carry HTML, shown here as literal text rather than rendered. `\n`
-marks a real line break, the same convention the .tsv uses.
+A few strings carry HTML. Those rows show both columns as code, so the tags are
+visible rather than rendered - they are part of the string and must survive
+translation unchanged. `\n` marks a real line break, the same convention the
+.tsv uses.
 
 ## About and licence dialogs (9)
 
@@ -26,13 +28,13 @@ marks a real line break, the same convention the .tsv uses.
 | --- | --- | --- | --- |
 | `&3rd Party Licenses` | &amp;Licencias de terceros |  |  |
 | `&About Qt` | Acerca de &amp;Qt |  |  |
-| `<h3>%1 - 3rd Party Licenses</h3>` | &lt;h3&gt;%1 - Licencias de terceros&lt;/h3&gt; |  |  |
-| `<h3>About %1</h3><p>%1</p><p>Version: %2</p><p>Build Date: %3</p><p>%4</p>` | &lt;h3&gt;Acerca de %1&lt;/h3&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Versión: %2&lt;/p&gt;&lt;p&gt;Fecha de compilación: %3&lt;/p&gt;&lt;p&gt;%4&lt;/p&gt; |  |  |
-| `<p>%1 uses multiple 3rd Party software mostly covered under the Qt distribution</p><p>However the following license(s) are not part of Qt.</p><hr style="width:50%;text-align:left;margin-left:0"><table border="1"><tr><th>Company</th><th>Product</th><th>License</th><th>Source Location</th><th>Patches</th></tr>` | &lt;p&gt;%1 utiliza software de terceros, en su mayoría cubierto por la distribución de Qt&lt;/p&gt;&lt;p&gt;No obstante, las licencias siguientes no forman parte de Qt.&lt;/p&gt;&lt;hr style="width:50%;text-align:left;margin-left:0"&gt;&lt;table border="1"&gt;&lt;tr&gt;&lt;th&gt;Empresa&lt;/th&gt;&lt;th&gt;Producto&lt;/th&gt;&lt;th&gt;Licencia&lt;/th&gt;&lt;th&gt;Ubicación del código fuente&lt;/th&gt;&lt;th&gt;Parches&lt;/th&gt;&lt;/tr&gt; | LENGTH: «Ubicación del código fuente» is a wide table heading (13 -&gt; 27 characters); «Origen» is the fallback if the licence table is cramped. |  |
-| `<p>Is a tool to help configure %1's Voltage Regulators.</p><p>For more information, please visit <a href="%2">%3</a>.</p><p>For the default Advanced and Admin passwords, contact <a href="mailto:%4">%4</a>.</p><hr style="width:50%;text-align:left;margin-left:0"><p>%5</p>` | &lt;p&gt;Es una herramienta que ayuda a configurar los reguladores de tensión de %1.&lt;/p&gt;&lt;p&gt;Para más información, visitar &lt;a href="%2"&gt;%3&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Para las contraseñas predeterminadas de Avanzado y Admin, escribir a &lt;a href="mailto:%4"&gt;%4&lt;/a&gt;.&lt;/p&gt;&lt;hr style="width:50%;text-align:left;margin-left:0"&gt;&lt;p&gt;%5&lt;/p&gt; |  |  |
+| `<h3>%1 - 3rd Party Licenses</h3>` | `<h3>%1 - Licencias de terceros</h3>` |  |  |
+| `<h3>About %1</h3><p>%1</p><p>Version: %2</p><p>Build Date: %3</p><p>%4</p>` | `<h3>Acerca de %1</h3><p>%1</p><p>Versión: %2</p><p>Fecha de compilación: %3</p><p>%4</p>` |  |  |
+| `<p>%1 uses multiple 3rd Party software mostly covered under the Qt distribution</p><p>However the following license(s) are not part of Qt.</p><hr style="width:50%;text-align:left;margin-left:0"><table border="1"><tr><th>Company</th><th>Product</th><th>License</th><th>Source Location</th><th>Patches</th></tr>` | `<p>%1 utiliza software de terceros, en su mayoría cubierto por la distribución de Qt</p><p>No obstante, las licencias siguientes no forman parte de Qt.</p><hr style="width:50%;text-align:left;margin-left:0"><table border="1"><tr><th>Empresa</th><th>Producto</th><th>Licencia</th><th>Ubicación del código fuente</th><th>Parches</th></tr>` | LENGTH: «Ubicación del código fuente» is a wide table heading (13 -&gt; 27 characters); «Origen» is the fallback if the licence table is cramped. |  |
+| `<p>Is a tool to help configure %1's Voltage Regulators.</p><p>For more information, please visit <a href="%2">%3</a>.</p><p>For the default Advanced and Admin passwords, contact <a href="mailto:%4">%4</a>.</p><hr style="width:50%;text-align:left;margin-left:0"><p>%5</p>` | `<p>Es una herramienta que ayuda a configurar los reguladores de tensión de %1.</p><p>Para más información, visitar <a href="%2">%3</a>.</p><p>Para las contraseñas predeterminadas de Avanzado y Admin, escribir a <a href="mailto:%4">%4</a>.</p><hr style="width:50%;text-align:left;margin-left:0"><p>%5</p>` |  |  |
 | `3rd Party Licenses` | Licencias de terceros |  |  |
 | `About %1` | Acerca de %1 |  |  |
-| `This tool supports the following LVR firmware versions:<br>LVR30 %1, LVR50 %2` | Esta herramienta admite las siguientes versiones de firmware LVR:&lt;br&gt;LVR30 %1, LVR50 %2 |  |  |
+| `This tool supports the following LVR firmware versions:<br>LVR30 %1, LVR50 %2` | `Esta herramienta admite las siguientes versiones de firmware LVR:<br>LVR30 %1, LVR50 %2` |  |  |
 
 ## Bluetooth - Available Regulators and pairing (48)
 
@@ -188,7 +190,7 @@ marks a real line break, the same convention the .tsv uses.
 | `&Disconnect` | &amp;Desconectar |  |  |
 | `&Regulator` | &amp;Regulador |  |  |
 | `&Settings` | &amp;Configuración |  |  |
-| `<br/>Would you like to reconnect?` | &lt;br/&gt;¿Desea volver a conectarse? |  |  |
+| `<br/>Would you like to reconnect?` | `<br/>¿Desea volver a conectarse?` |  |  |
 | `'%1' is a name Windows reserves and cannot be used in a file name.` | '%1' es un nombre reservado por Windows y no se puede usar en un nombre de archivo. |  |  |
 | `(Re-)Initialize Regulator Control Board` | (Re)inicializar la placa de control del regulador |  |  |
 | `(Re-)initialize the Control Board...` | (Re)inicializar la placa de control... |  |  |
@@ -968,8 +970,8 @@ marks a real line break, the same convention the .tsv uses.
 | ` Send CTRL-C ` |  Enviar CTRL-C  |  |  |
 | `%1:     Sent: %2` | %1:     Enviado: %2 | CHECK: the source pads 'Sent' with spaces so it lines up under 'Received'. «Recibido»/«Enviado» differ in length, so the padding no longer aligns; the reviewer may want to re-space both lines together. |  |
 | `%1: %2` | %1: %2 |  |  |
-| `%1: <font color="orange">WARNING: %2</font>` | %1: &lt;font color="orange"&gt;AVISO: %2&lt;/font&gt; |  |  |
-| `%1: <font color="red">ERROR: %2</font>` | %1: &lt;font color="red"&gt;ERROR: %2&lt;/font&gt; |  |  |
+| `%1: <font color="orange">WARNING: %2</font>` | `%1: <font color="orange">AVISO: %2</font>` |  |  |
+| `%1: <font color="red">ERROR: %2</font>` | `%1: <font color="red">ERROR: %2</font>` |  |  |
 | `%1: Received:   %2` | %1: Recibido:   %2 |  |  |
 | `Clear Transcript` | Borrar la transcripción |  |  |
 | `Command To Send` | Comando a enviar |  |  |

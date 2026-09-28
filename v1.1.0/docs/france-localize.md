@@ -17,8 +17,10 @@ Some strings are translated to themselves on purpose. Firmware fault codes (`CB`
 (`toolBar`, `MainWindow`) are identifiers rather than prose - translating them
 would break the match against what the regulator actually sends.
 
-A few strings carry HTML, shown here as literal text rather than rendered. `\n`
-marks a real line break, the same convention the .tsv uses.
+A few strings carry HTML. Those rows show both columns as code, so the tags are
+visible rather than rendered - they are part of the string and must survive
+translation unchanged. `\n` marks a real line break, the same convention the
+.tsv uses.
 
 ## About and licence dialogs (9)
 
@@ -26,13 +28,13 @@ marks a real line break, the same convention the .tsv uses.
 | --- | --- | --- | --- |
 | `&3rd Party Licenses` | &amp;Licences tierces |  |  |
 | `&About Qt` | À propos de &amp;Qt |  |  |
-| `<h3>%1 - 3rd Party Licenses</h3>` | &lt;h3&gt;%1 - Licences tierces&lt;/h3&gt; |  |  |
-| `<h3>About %1</h3><p>%1</p><p>Version: %2</p><p>Build Date: %3</p><p>%4</p>` | &lt;h3&gt;À propos de %1&lt;/h3&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Version : %2&lt;/p&gt;&lt;p&gt;Date de compilation : %3&lt;/p&gt;&lt;p&gt;%4&lt;/p&gt; |  |  |
-| `<p>%1 uses multiple 3rd Party software mostly covered under the Qt distribution</p><p>However the following license(s) are not part of Qt.</p><hr style="width:50%;text-align:left;margin-left:0"><table border="1"><tr><th>Company</th><th>Product</th><th>License</th><th>Source Location</th><th>Patches</th></tr>` | &lt;p&gt;%1 utilise plusieurs logiciels tiers, couverts pour la plupart par la distribution Qt&lt;/p&gt;&lt;p&gt;Les licences suivantes ne font toutefois pas partie de Qt.&lt;/p&gt;&lt;hr style="width:50%;text-align:left;margin-left:0"&gt;&lt;table border="1"&gt;&lt;tr&gt;&lt;th&gt;Société&lt;/th&gt;&lt;th&gt;Produit&lt;/th&gt;&lt;th&gt;Licence&lt;/th&gt;&lt;th&gt;Emplacement des sources&lt;/th&gt;&lt;th&gt;Correctifs&lt;/th&gt;&lt;/tr&gt; | CHECK: only the text between tags is translated; the style/border attribute values (including the « 50% ») are copied verbatim and take no French spacing. |  |
-| `<p>Is a tool to help configure %1's Voltage Regulators.</p><p>For more information, please visit <a href="%2">%3</a>.</p><p>For the default Advanced and Admin passwords, contact <a href="mailto:%4">%4</a>.</p><hr style="width:50%;text-align:left;margin-left:0"><p>%5</p>` | &lt;p&gt;Outil d’aide à la configuration des régulateurs de tension de %1.&lt;/p&gt;&lt;p&gt;Pour plus d’informations, consultez &lt;a href="%2"&gt;%3&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Pour les mots de passe Avancé et Admin par défaut, contactez &lt;a href="mailto:%4"&gt;%4&lt;/a&gt;.&lt;/p&gt;&lt;hr style="width:50%;text-align:left;margin-left:0"&gt;&lt;p&gt;%5&lt;/p&gt; |  |  |
+| `<h3>%1 - 3rd Party Licenses</h3>` | `<h3>%1 - Licences tierces</h3>` |  |  |
+| `<h3>About %1</h3><p>%1</p><p>Version: %2</p><p>Build Date: %3</p><p>%4</p>` | `<h3>À propos de %1</h3><p>%1</p><p>Version : %2</p><p>Date de compilation : %3</p><p>%4</p>` |  |  |
+| `<p>%1 uses multiple 3rd Party software mostly covered under the Qt distribution</p><p>However the following license(s) are not part of Qt.</p><hr style="width:50%;text-align:left;margin-left:0"><table border="1"><tr><th>Company</th><th>Product</th><th>License</th><th>Source Location</th><th>Patches</th></tr>` | `<p>%1 utilise plusieurs logiciels tiers, couverts pour la plupart par la distribution Qt</p><p>Les licences suivantes ne font toutefois pas partie de Qt.</p><hr style="width:50%;text-align:left;margin-left:0"><table border="1"><tr><th>Société</th><th>Produit</th><th>Licence</th><th>Emplacement des sources</th><th>Correctifs</th></tr>` | CHECK: only the text between tags is translated; the style/border attribute values (including the « 50% ») are copied verbatim and take no French spacing. |  |
+| `<p>Is a tool to help configure %1's Voltage Regulators.</p><p>For more information, please visit <a href="%2">%3</a>.</p><p>For the default Advanced and Admin passwords, contact <a href="mailto:%4">%4</a>.</p><hr style="width:50%;text-align:left;margin-left:0"><p>%5</p>` | `<p>Outil d’aide à la configuration des régulateurs de tension de %1.</p><p>Pour plus d’informations, consultez <a href="%2">%3</a>.</p><p>Pour les mots de passe Avancé et Admin par défaut, contactez <a href="mailto:%4">%4</a>.</p><hr style="width:50%;text-align:left;margin-left:0"><p>%5</p>` |  |  |
 | `3rd Party Licenses` | Licences tierces |  |  |
 | `About %1` | À propos de %1 |  |  |
-| `This tool supports the following LVR firmware versions:<br>LVR30 %1, LVR50 %2` | Cet outil prend en charge les versions de micrologiciel LVR suivantes :&lt;br&gt;LVR30 %1, LVR50 %2 |  |  |
+| `This tool supports the following LVR firmware versions:<br>LVR30 %1, LVR50 %2` | `Cet outil prend en charge les versions de micrologiciel LVR suivantes :<br>LVR30 %1, LVR50 %2` |  |  |
 
 ## Bluetooth - Available Regulators and pairing (48)
 
@@ -188,7 +190,7 @@ marks a real line break, the same convention the .tsv uses.
 | `&Disconnect` | Se &amp;déconnecter |  |  |
 | `&Regulator` | &amp;Régulateur |  |  |
 | `&Settings` | &amp;Paramètres |  |  |
-| `<br/>Would you like to reconnect?` | &lt;br/&gt;Souhaitez-vous vous reconnecter ? |  |  |
+| `<br/>Would you like to reconnect?` | `<br/>Souhaitez-vous vous reconnecter ?` |  |  |
 | `'%1' is a name Windows reserves and cannot be used in a file name.` | '%1' est un nom réservé par Windows et ne peut pas être utilisé dans un nom de fichier. |  |  |
 | `(Re-)Initialize Regulator Control Board` | (Ré)initialiser la carte de commande du régulateur |  |  |
 | `(Re-)initialize the Control Board...` | (Ré)initialiser la carte de commande… | TERM: « carte de commande » for control board. Confirm against the hardware documentation. |  |
@@ -968,8 +970,8 @@ marks a real line break, the same convention the .tsv uses.
 | ` Send CTRL-C ` |  Envoyer CTRL-C  |  |  |
 | `%1:     Sent: %2` | %1: Envoyé : %2 |  |  |
 | `%1: %2` | %1: %2 |  |  |
-| `%1: <font color="orange">WARNING: %2</font>` | %1: &lt;font color="orange"&gt;AVERTISSEMENT : %2&lt;/font&gt; | LENGTH: « WARNING » becomes « AVERTISSEMENT » on every warning line of the journal. |  |
-| `%1: <font color="red">ERROR: %2</font>` | %1: &lt;font color="red"&gt;ERREUR : %2&lt;/font&gt; |  |  |
+| `%1: <font color="orange">WARNING: %2</font>` | `%1: <font color="orange">AVERTISSEMENT : %2</font>` | LENGTH: « WARNING » becomes « AVERTISSEMENT » on every warning line of the journal. |  |
+| `%1: <font color="red">ERROR: %2</font>` | `%1: <font color="red">ERREUR : %2</font>` |  |  |
 | `%1: Received:   %2` | %1:   Reçu : %2 | CHECK: the English pads « Received: » / « Sent: » to line the %2 column up. « Reçu » / « Envoyé » are re-padded here so the two lines still align; adjust if the pane is not monospaced. |  |
 | `Clear Transcript` | Effacer le journal de session | LENGTH: 16 chars becomes 28 on what is likely a toolbar button; « Effacer le journal » if it clips. |  |
 | `Command To Send` | Commande à envoyer |  |  |
