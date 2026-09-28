@@ -7,31 +7,10 @@ This repository holds the published builds and nothing else — no source code.
 
 ## Download
 
-### 1.1.0 — current
-
 | | |
 |---|---|
-| **Installer** (recommended) | [LVR_Configuration_Tool-1.1.0.exe](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/installers/LVR_Configuration_Tool-1.1.0.exe) |
-| Portable zip (no installer) | [LVR_Configuration_Tool-1.1.0.zip](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/installers/LVR_Configuration_Tool-1.1.0.zip) |
-
-New in 1.1.0: a **Language** page in Settings, offering Portuguese, French, Italian and
-Spanish alongside English. The tool still starts in English, and English is unchanged.
-
-The translations are a first pass that a native speaker has not yet reviewed. They cover
-the whole interface, but expect wording a native reader would put differently — the
-electrical terminology especially. Corrections are welcome: send them to the support
-address below.
-
-### 1.0.0 — previous
-
-Kept available for anyone who needs to go back to it.
-
-| | |
-|---|---|
-| Installer | [LVR_Configuration_Tool-1.0.0.exe](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/installers/LVR_Configuration_Tool-1.0.0.exe) |
+| **Installer** (recommended) | [LVR_Configuration_Tool-1.0.0.exe](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/installers/LVR_Configuration_Tool-1.0.0.exe) |
 | Portable zip (no installer) | [LVR_Configuration_Tool-1.0.0.zip](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/installers/LVR_Configuration_Tool-1.0.0.zip) |
-
-Both versions are signed by Pacific Volt Inc.
 
 ## Install
 
