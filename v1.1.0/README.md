@@ -21,6 +21,28 @@ build is for**; send them to the support address below.
 
 The built-in user guides under the Help menu remain in English in every language.
 
+## Reviewing the translations
+
+Every translated string is listed in [docs/](docs/), one document per language, as Markdown
+and as a spreadsheet holding the same table:
+
+| Language | Table | Spreadsheet |
+|---|---|---|
+| European Portuguese (pt-PT) | [portugal-localize.md](docs/portugal-localize.md) | [portugal-localize.xlsx](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/v1.1.0/docs/portugal-localize.xlsx) |
+| French (fr-FR) | [france-localize.md](docs/france-localize.md) | [france-localize.xlsx](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/v1.1.0/docs/france-localize.xlsx) |
+| Italian (it-IT) | [italy-localize.md](docs/italy-localize.md) | [italy-localize.xlsx](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/v1.1.0/docs/italy-localize.xlsx) |
+| Spanish (es-ES) | [spain-localize.md](docs/spain-localize.md) | [spain-localize.xlsx](https://github.com/pacificvolt-public/pacificvolt-regulator-configtool/raw/main/v1.1.0/docs/spain-localize.xlsx) |
+
+Each row gives the English, our translation, any question we have about it, and an empty
+**Your correction** column. Fill that column in — or edit the translation directly — and
+send the file back; nothing needs to be installed and no software knowledge is required.
+The spreadsheet is easier for long text and for anything carrying markup.
+
+The rows are grouped by where the text appears in the tool, so a reviewer can work through
+one screen at a time rather than an alphabetical list, and the questions are there because a
+first pass that says where it is unsure is worth more than one that sounds confident
+throughout.
+
 ## Download
 
 | | |
